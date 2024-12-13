@@ -33,18 +33,16 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <div className="menu-container">
+    <div className="mt-4 text-sm">
       {menuItems.map((menu) => (
-        <div className="menu-section" key={menu.title}>
-          <span className="menu-title">{menu.title}</span>
-          <div className="menu-items">
+        <div className="flex flex-col gap-2" key={menu.title}>
+          <span className="hidden lg:block text-gray-400 font-light my-4">{menu.title}</span>
             {menu.items.map((menuItem) => (
-              <Link href={menuItem.href} key={menuItem.label} className="menu-link flex items-center gap-2">
+              <Link href={menuItem.href} key={menuItem.label} className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2">
                 <Image src={menuItem.icon} alt={menuItem.label} width={20} height={20} />
-                <span>{menuItem.label}</span>
+                <span className="hidden lg:block">{menuItem.label}</span>
               </Link>
             ))}
-          </div>
         </div>
       ))}
     </div>
