@@ -11,11 +11,6 @@
   font-weight: 600;
 }
 
-.react-calendar__title--active {
-  background-color: #C3EBFA !important;
-  color: black !important;
-}
-
 .rbc-btn-group:first-child {
   display: none;
 }
@@ -49,6 +44,13 @@
   padding: 0px 20px !important;
 }
 
+.rbc-timeslot-group {
+  background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+  font-size: 14px !important;
+}
 .rbc-event {
   border: none !important;
   color: black !important;
@@ -80,4 +82,9 @@
 }
 .rbc-event:nth-child(8){
   background-color: #fdf2fb !important;
+}
+
+.rbc-event-label {
+  color: gray !important;
+  margin-bottom: 5px !important;
 }
