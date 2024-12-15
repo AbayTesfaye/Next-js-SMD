@@ -1,3 +1,4 @@
+import Announcement from "@/components/Announcement";
 import AttendanceChart from "@/components/AttendanceChart";
 import CountChart from "@/components/CountChart";
 import EventCalendar from "@/components/EventCalendar";
@@ -28,6 +29,7 @@ const AdminPage = () => {
        {/* RIGHT */}
        <div className="w-full md:w-1/3">
        <EventCalendar/>
+       <Announcement/>
        </div>
     </div>
   )
