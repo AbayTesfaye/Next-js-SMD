@@ -4,7 +4,7 @@ import moment from 'moment';
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { useState } from 'react';
 import { calendarEvents } from '@/lib/data';
-import { min } from './../../node_modules/@types/date-arithmetic/index.d';
+
 
 const localizer = momentLocalizer(moment);
 
