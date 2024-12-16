@@ -1,3 +1,4 @@
+import Pagination from "@/components/Pagination"
 import TableSearch from "@/components/TableSearch"
 import Image from "next/image"
 
@@ -14,7 +15,7 @@ const TeachersPage = () => {
                     <Image src='/filter.png' width={14} height={14} alt="message"/>
                 </button>
                 <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
-                   <Image src='/plus.png' width={14} height={14} alt="message"/>
+                   <Image src='/sort.png' width={14} height={14} alt="message"/>
                 </button>
                 <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
                    <Image src='/plus.png' width={14} height={14} alt="message"/>
@@ -25,7 +26,7 @@ const TeachersPage = () => {
         {/* LIST */}
         <div></div>
         {/* PAGINATION */}
-        <div></div>
+       <Pagination/>
     </div>
   )
 }
