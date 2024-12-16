@@ -27,23 +27,24 @@ const columns = [
     {
         header: "Phone", 
         accessor: "hone", 
-        className: "hidden lg:table-cell"
+        className: "hidden lg:table-cell" // Ensure this hides on medium and shows on large screens
     },
     {
         header: "Address", 
         accessor: "address", 
-        className: "hidden lg:table-cell"
+        className: "hidden lg:table-cell" // Ensure this hides on medium and shows on large screens
     },
     {
         header: "Actions", 
         accessor: "actions", 
-        className: "hidden lg:table-cell"
+        className: "hidden md:table-cell"
     },
 ]
+
 const TeachersPage = () => {
     const renderRow = (item: Teacher) => (
-        <tr key={item.id} className="border-b">
-          <td className="flex items-center gap-4 py-2">
+        <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 hover:bg-schoolPurpleLight">
+          <td className="flex items-center gap-4 p-4">
             <Image
               src={item.photo}
               alt="Teacher photo"
@@ -59,8 +60,8 @@ const TeachersPage = () => {
           <td className="hidden md:table-cell">{item.teacherId}</td>
           <td className="hidden md:table-cell">{item.subjects?.join(", ")}</td>
           <td className="hidden md:table-cell">{item.classes?.join(", ")}</td>
-          <td className="hidden md:table-cell">{item.phone}</td>
-          <td className="hidden md:table-cell">{item.address}</td>
+          <td className="hidden lg:table-cell">{item.phone}</td>
+          <td className="hidden lg:table-cell">{item.address}</td>
           <td>
             <div className="flex items-center gap-2">
               <Link href={`/list/teachers/${item.id}`}>

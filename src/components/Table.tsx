@@ -25,9 +25,9 @@ const Table = ({ columns,renderRow, data }: TableProps) => {
   return (
     <table className="w-full mt-4 border-collapse border">
       <thead>
-        <tr className="text-left bg-gray-200 text-gray-600">
-          {columns.map((column, index) => (
-            <th key={index} className={`px-4 py-2 ${column.className || ""}`}>
+        <tr className="text-left text-sm text-gray-600">
+          {columns.map((column) => (
+            <th key={column.accessor} className={`px-4 py-2 ${column.className}`}>
               {column.header}
             </th>
           ))}
