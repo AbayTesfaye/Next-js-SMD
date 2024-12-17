@@ -5,6 +5,18 @@ import { role, teachersData } from "@/lib/data"
 import Image from "next/image"
 import Link from "next/link"
 
+type Teacher = {
+  id:number;
+  teacherId:string;
+  name:string;
+  email?:string;
+  photo:string;
+  phone:string;
+  subjects:string[];
+  classes:string[];
+  address:string;
+}
+
 const columns = [
     {
         header: "Info", 

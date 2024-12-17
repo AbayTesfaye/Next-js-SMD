@@ -5,6 +5,19 @@ import { role, studentsData} from "@/lib/data"
 import Image from "next/image"
 import Link from "next/link"
 
+
+type Student = {
+  id:number;
+  studentId:string;
+  name:string;
+  email?:string;
+  photo:string;
+  class:string;
+  grade:number;
+  phone:string;
+  address:string;
+}
+
 const columns = [
     {
         header: "Info", 
@@ -50,12 +63,12 @@ const StudentListPage = () => {
             />
             <div>
               <h1 className="font-medium text-gray-800">{item.name}</h1>
-              <p className="text-sm text-gray-500">{item?.class}</p>
+              <p className="text-sm text-gray-500">{item.class}</p>
             </div>
           </td>
           <td className="hidden md:table-cell">{item.studentId}</td>
           <td className="hidden md:table-cell">{item.grade}</td>
-          <td className="hidden lg:table-cell">{item.phone}</td>
+          <td className="hidden lg:table-cell">{item?.phone}</td>
           <td className="hidden lg:table-cell">{item.address}</td>
           <td>
             <div className="flex items-center gap-2">
