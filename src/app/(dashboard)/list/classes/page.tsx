@@ -1,74 +1,57 @@
 import Pagination from "@/components/Pagination"
 import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
-import { role, studentsData} from "@/lib/data"
+import { classesData, role} from "@/lib/data"
 import Image from "next/image"
 import Link from "next/link"
 
 
-type Student = {
+type Class = {
   id:number;
-  studentId:string;
   name:string;
-  email?:string;
-  photo:string;
-  class:string;
+  capacity:number;
   grade:number;
-  phone:string;
-  address:string;
+  supervisor:string;
 }
 
 const columns = [
     {
-        header: "Info", 
-        accessor: "info"
+        header: "Class Name", 
+        accessor: "name"
     },
     {
-        header: "Student ID", 
-        accessor: "studentid", 
-        className: "hidden md:table-cell"
+        header: "Capacity", 
+        accessor: "capacity", 
+        className: "hidden md:table-cell",
     },
     {
         header: "Grade", 
         accessor: "grade", 
+        className: "hidden md:table-cell" 
+    },
+    {
+        header: "Supervisor", 
+        accessor: "supervisor", 
         className: "hidden md:table-cell"
-    },
-    {
-        header: "Phone", 
-        accessor: "phone", 
-        className: "hidden md:table-cell" // Ensure this hides on medium and shows on large screens
-    },
-    {
-        header: "Address", 
-        accessor: "address", 
-        className: "hidden md:table-cell" // Ensure this hides on medium and shows on large screens
     },
     {
         header: "Actions", 
         accessor: "actions", 
+        className: "hidden md:table-cell"
     },
 ]
 
-const StudentListPage = () => {
-    const renderRow = (item: Student) => (
+const ClassListPage = () => {
+    const renderRow = (item: Class) => (
         <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 hover:bg-schoolPurpleLight">
           <td className="flex items-center gap-4 p-4">
-            <Image
-              src={item.photo}
-              alt="Teacher photo"
-              width={40}
-              height={40}
-              className="hidden md:block w-10 h-10 rounded-full object-cover"
-            />
             <div>
               <h1 className="font-medium text-gray-800">{item.name}</h1>
-              <p className="text-sm text-gray-500">{item.class}</p>
             </div>
           </td>
-          <td className="hidden md:table-cell">{item.studentId}</td>
-          <td className="hidden md:table-cell">{item.grade}</td>
-          <td className="hidden lg:table-cell">{item?.phone}</td>
-          <td className="hidden lg:table-cell">{item.address}</td>
+          <td className="hidden md:table-cell">{item.capacity}</td>
+          <td className="hidden lg:table-cell">{item.grade}</td>
+          <td className="hidden lg:table-cell">{item.supervisor}</td>
           <td>
             <div className="flex items-center gap-2">
               <Link href={`/list/students/${item.id}`}>
@@ -91,7 +74,7 @@ const StudentListPage = () => {
     <div className='bg-white rounded-md p-4 flex-1 m-4 mt-0'>
         {/* TOP */}
         <div className="flex justify-between items-center">
-            <h1 className="hidden md:block text-lg font-semibold">All Students</h1>
+            <h1 className="hidden md:block text-lg font-semibold">All Classes</h1>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 w-full md:w-auto">
               <TableSearch/>
               <div className="flex gap-4 self-end items-center ">
@@ -109,11 +92,11 @@ const StudentListPage = () => {
             </div>
         </div>
         {/* LIST */}
-        <Table columns={columns} renderRow={renderRow} data={studentsData}/>
+        <Table columns={columns} renderRow={renderRow} data={classesData}/>
         {/* PAGINATION */}
        <Pagination/>
     </div>
   )
 }
 
-export default StudentListPage
+export default ClassListPage
