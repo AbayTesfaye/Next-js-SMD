@@ -23,11 +23,11 @@ type Teacher = {
 
 const Table = ({ columns,renderRow, data }: TableProps) => {
   return (
-    <table className="w-full mt-4 border-collapse border">
+    <table className="w-full mt-4 r">
       <thead>
-        <tr className="text-left text-sm text-gray-600">
+        <tr className="text-left text-[16px] text-gray-400">
           {columns.map((column) => (
-            <th key={column.accessor} className={`px-4 py-2 ${column.className}`}>
+            <th key={column.accessor} className={`${column.className}`}>
               {column.header}
             </th>
           ))}

@@ -8,9 +8,8 @@ import Link from "next/link"
 
 type Parents = {
   id:number;
-  parentId:string;
   name:string;
-  studentName:string;
+  students:string[];
   email?:string;
   phone:string;
   address:string;
@@ -22,8 +21,8 @@ const columns = [
         accessor: "info"
     },
     {
-        header: "Student Name", 
-        accessor: "studentName", 
+        header: "Student Names", 
+        accessor: "students", 
         className: "hidden md:table-cell"
     },
     {
@@ -43,7 +42,7 @@ const columns = [
     },
 ]
 
-const ParentsListPage = () => {
+const ParentListPage = () => {
     const renderRow = (item: Parents) => (
         <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 hover:bg-schoolPurpleLight">
           <td className="flex items-center gap-4 p-4">
@@ -52,8 +51,8 @@ const ParentsListPage = () => {
               <p className="text-sm text-gray-500">{item.email}</p>
             </div>
           </td>
-          <td className="hidden md:table-cell">{item.studentName}</td>
-          <td className="hidden lg:table-cell">{item?.phone}</td>
+          <td className="hidden md:table-cell">{item.students.join(',')}</td>
+          <td className="hidden lg:table-cell">{item.phone}</td>
           <td className="hidden lg:table-cell">{item.address}</td>
           <td>
             <div className="flex items-center gap-2">
@@ -102,4 +101,4 @@ const ParentsListPage = () => {
   )
 }
 
-export default ParentsListPage
+export default ParentListPage
