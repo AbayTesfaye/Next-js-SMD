@@ -46,7 +46,6 @@ const columns = [
     {
         header: "Actions", 
         accessor: "actions", 
-        className: "hidden md:table-cell"
     },
 ]
 
