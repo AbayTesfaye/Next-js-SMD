@@ -41,7 +41,36 @@ const SingleTeacherPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex-1 bg-schoolPurple">small cards</div>
+            <div className="flex-1 flex gap-3 justify-between flex-wrap">
+                <div className="flex bg-white rounded-md gap-4 w-full px-4 py-2 md:w-[48%] xl:w-[45%] 2x:w-[48%]">
+                    <Image src='/singleAttendance.png' alt="" width={24} height={24} className="h-6 w-6"/>
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-xl font-semibold">90%</h1>
+                        <span className="text-sm text-gray-400">Attendance</span>
+                    </div>
+                </div>
+                <div className="flex bg-white rounded-md gap-4 w-full px-4 py-2 md:w-[48%] xl:w-[45%] 2x:w-[48%]">
+                    <Image src='/singleBranch.png' alt="" width={24} height={24} className="h-6 w-6"/>
+                    <div className="flex flex-col gap-4">
+                      <h1 className="text-xl font-semibold">2</h1>
+                      <span className="text-sm text-gray-400">Branches</span>
+                    </div>
+                </div>
+                <div className="flex bg-white rounded-md gap-4 w-full px-4 py-2 md:w-[48%] xl:w-[45%] 2x:w-[48%]">
+                    <Image src='/singleLesson.png' alt="" width={24} height={24} className="h-6 w-6"/>
+                    <div className="flex flex-col gap-4">
+                       <h1 className="text-xl font-semibold">6</h1>
+                       <span className="text-sm text-gray-400">Lessons</span>
+                    </div>
+                </div>
+                <div className="flex bg-white rounded-md gap-4 w-full px-4 py-2 md:w-[48%] xl:w-[45%] 2x:w-[48%]">
+                    <Image src='/singleClass.png' alt="" width={24} height={24} className="h-6 w-6"/>
+                    <div className="flex flex-col gap-4">
+                        <h1 className="text-xl font-semibold">6</h1>
+                        <span className="text-sm text-gray-400">Classes</span>
+                    </div>
+                </div>
+            </div>
          </div>
          {/* bottom */}
          <div>schedule</div>
