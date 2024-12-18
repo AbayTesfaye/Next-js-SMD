@@ -1,3 +1,4 @@
+import Announcement from "@/components/Announcement"
 import BigCalendar from "@/components/BigCalendar"
 import Performance from "@/components/Performance"
 import Image from "next/image"
@@ -104,11 +105,12 @@ const SingleTeacherPage = () => {
                 </div>
            </div>
          </div>
-           {/* performance */}
-       
-            <Performance/>
-       
-           {/* Announcements */}
+         <div>
+        {/* performance */}
+         <Performance/>
+        {/* Announcements */}
+        <Announcement/>
+         </div>
          <div></div>
        </div>
     </div>
