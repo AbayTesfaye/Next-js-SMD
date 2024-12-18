@@ -1,4 +1,5 @@
 import BigCalendar from "@/components/BigCalendar"
+import Performance from "@/components/Performance"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -83,25 +84,30 @@ const SingleTeacherPage = () => {
          {/* RIGHT */}
        <div className="w-full xl:w-1/3">
            {/* shortcuts */}
-         <div className="flex flex-wrap gap-4 bg-white rounded-md p-4">
-            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
-             <Link href='/list/teachers' className="">Teacher's Classes</Link>
-            </div>
-            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
-             <Link href='/list/students' className="">Teacher's Students</Link>
-            </div>
-            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolYellowLight" >
-             <Link href='/list/lessons' className="">Teacher's Lessons</Link>
-            </div>
-            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
-             <Link href='' className="">Teacher's Exams</Link>
-            </div>
-            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
-             <Link href='/list/assignments' className="">Teacher's Assignments</Link>
-            </div>
+         <div className="flex flex-col gap-4 bg-white rounded-md p-4">
+            <h1 className="text-xl font-semibold">Shortcuts</h1>
+            <div className="flex flex-wrap gap-4" >
+                <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
+                <Link href='/list/teachers' className="">Teacher's Classes</Link>
+                </div>
+                <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
+                <Link href='/list/students' className="">Teacher's Students</Link>
+                </div>
+                <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolYellowLight" >
+                <Link href='/list/lessons' className="">Teacher's Lessons</Link>
+                </div>
+                <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
+                <Link href='' className="">Teacher's Exams</Link>
+                </div>
+                <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
+                <Link href='/list/assignments' className="">Teacher's Assignments</Link>
+                </div>
+           </div>
          </div>
            {/* performance */}
-         <div></div>
+       
+            <Performance/>
+       
            {/* Announcements */}
          <div></div>
        </div>
