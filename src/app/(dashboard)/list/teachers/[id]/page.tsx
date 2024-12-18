@@ -1,9 +1,10 @@
+import BigCalendar from "@/components/BigCalendar"
 import Image from "next/image"
 
 
 const SingleTeacherPage = () => {
   return (
-    <div className='flex-1 flex flex-col gap-4 xl:flex-row'>
+    <div className='flex-1 flex flex-col gap-4 xl:flex-row mx-2'>
          {/* LEFT */}
        <div className="w-full xl:w-2/3">
          {/* top */}
@@ -73,7 +74,10 @@ const SingleTeacherPage = () => {
             </div>
          </div>
          {/* bottom */}
-         <div>schedule</div>
+         <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
+            <h1>Teacher's Schedule</h1>
+            <BigCalendar/>
+         </div>
        </div>
          {/* RIGHT */}
        <div className="w-full xl:w-1/3">RIGHT</div>
