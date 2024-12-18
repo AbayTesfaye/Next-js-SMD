@@ -1,5 +1,6 @@
 import BigCalendar from "@/components/BigCalendar"
 import Image from "next/image"
+import Link from "next/link"
 
 
 const SingleTeacherPage = () => {
@@ -80,7 +81,30 @@ const SingleTeacherPage = () => {
          </div>
        </div>
          {/* RIGHT */}
-       <div className="w-full xl:w-1/3">RIGHT</div>
+       <div className="w-full xl:w-1/3">
+           {/* shortcuts */}
+         <div className="flex flex-wrap gap-4 bg-white rounded-md p-4">
+            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
+             <Link href='/list/teachers' className="">Teacher's Classes</Link>
+            </div>
+            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
+             <Link href='/list/students' className="">Teacher's Students</Link>
+            </div>
+            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolYellowLight" >
+             <Link href='/list/lessons' className="">Teacher's Lessons</Link>
+            </div>
+            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
+             <Link href='' className="">Teacher's Exams</Link>
+            </div>
+            <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
+             <Link href='/list/assignments' className="">Teacher's Assignments</Link>
+            </div>
+         </div>
+           {/* performance */}
+         <div></div>
+           {/* Announcements */}
+         <div></div>
+       </div>
     </div>
   )
 }
