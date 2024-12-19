@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal"
 import Pagination from "@/components/Pagination"
 import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
@@ -106,11 +107,12 @@ const TeachersListPage = () => {
                 <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
                    <Image src='/sort.png' width={14} height={14} alt="message"/>
                 </button>
-                 {role === 'admin' && 
-                   <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
-                   <Image src='/plus.png' width={14} height={14} alt="message"/>
-                   </button>
-                  } 
+                 {role === 'admin' && (
+                  //  <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
+                  //  <Image src='/plus.png' width={14} height={14} alt="message"/>
+                  //  </button>
+                  <FormModal table="teacher" type="create"/>
+                  )} 
               </div>
             </div>
         </div>

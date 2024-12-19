@@ -15,7 +15,7 @@ const SingleStudentPage = () => {
             <div className="bg-schoolSky py-6 px-4 rounded-md flex-1 flex gap-4">
                 <div className="w-1/3">
                   <Image
-                  src='https://images.pexels.com/photos/936126/pexels-photo-936126.jpeg?auto=compress&cs=tinysrgb&w=1200' 
+                  src='https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1200' 
                   width={144} 
                   height={144}
                   alt=""
@@ -95,7 +95,7 @@ const SingleStudentPage = () => {
                 <Link href='/list/teachers' className="">Students Teachers</Link>
                 </div>
                 <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolSkyLight" >
-                <Link href='' className="">Students Exams</Link>
+                <Link href='/list/exams' className="">Students Exams</Link>
                 </div>
                 <div className="text-medium text-gray-400 rounded-md p-2 bg-schoolPurpleLight" >
                 <Link href='/list/assignments' className="">Students Assignments</Link>
