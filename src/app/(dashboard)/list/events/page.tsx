@@ -72,7 +72,7 @@ const EventListPage = () => {
                 //   <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolPurple">
                 //   <Image src='/delete.png' alt="" width={16} height={16}/>
                 //  </button>
-                <FormModal table="event" type="delete"/>
+                <FormModal table="event" type="delete" id={item.id}/>
                 )
               }
             </div>

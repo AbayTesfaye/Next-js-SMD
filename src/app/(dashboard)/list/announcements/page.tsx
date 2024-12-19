@@ -5,6 +5,7 @@ import {announcementsData, eventsData, resultsData,role} from "@/lib/data"
 import Image from "next/image"
 import Link from "next/link"
 import Announcement from './../../../../components/Announcement';
+import FormModal from "@/components/FormModal"
 
 
 type Announcement = {
@@ -55,9 +56,10 @@ const AnnouncementListPage = () => {
               </Link>
               {
                 role === 'admin' && (
-                  <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolPurple">
-                  <Image src='/delete.png' alt="" width={16} height={16}/>
-                 </button>
+                //   <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolPurple">
+                //   <Image src='/delete.png' alt="" width={16} height={16}/>
+                //  </button>
+                <FormModal table="announcement" type="delete" id={item.id}/>
                 )
               }
             </div>
@@ -78,9 +80,11 @@ const AnnouncementListPage = () => {
                 <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
                    <Image src='/sort.png' width={14} height={14} alt="message"/>
                 </button>
-                {role === 'admin' && <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
-                   <Image src='/plus.png' width={14} height={14} alt="message"/>
-                </button>
+                {role === 'admin' && 
+                // <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
+                //    <Image src='/plus.png' width={14} height={14} alt="message"/>
+                // </button>
+                <FormModal table="announcement" type="create"/>
                 }  
               </div>
             </div>
