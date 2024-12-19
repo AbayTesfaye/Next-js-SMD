@@ -41,17 +41,12 @@ const SubjectListPage = () => {
           <td className="hidden md:table-cell">{item.teachers.join(',')}</td>
           <td>
             <div className="flex items-center gap-2">
-              <Link href={`/list/students/${item.id}`}>
-               <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolSky">
-                <Image src='/edit.png' alt="" width={16} height={16}/>
-               </button>
-              </Link>
               {
                 role === 'admin' && (
-                //   <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolPurple">
-                //   <Image src='/delete.png' alt="" width={16} height={16}/>
-                //  </button>
-                <FormModal table="subject" type="delete" id={item.id}/>
+                  <>
+                  <FormModal table="subject" type="update" data={item}/>
+                  <FormModal table="subject" type="delete" id={item.id}/>
+                 </> 
                 )
               }
             </div>
