@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal"
 import Pagination from "@/components/Pagination"
 import Table from "@/components/Table"
 import TableSearch from "@/components/TableSearch"
@@ -61,9 +62,10 @@ const ExamListPage = () => {
               </Link>
               {
                 role === 'admin' && (
-                  <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolPurple">
-                  <Image src='/delete.png' alt="" width={16} height={16}/>
-                 </button>
+                //   <button className="w-7 h-7 flex items-center justify-center rounded-full bg-schoolPurple">
+                //   <Image src='/delete.png' alt="" width={16} height={16}/>
+                //  </button>
+                <FormModal table="exam" type="delete"/>
                 )
               }
             </div>
@@ -84,9 +86,11 @@ const ExamListPage = () => {
                 <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
                    <Image src='/sort.png' width={14} height={14} alt="message"/>
                 </button>
-                {role === 'admin' && <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
-                   <Image src='/plus.png' width={14} height={14} alt="message"/>
-                </button>
+                {role === 'admin' && 
+                // <button className="bg-schoolYellow rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
+                //    <Image src='/plus.png' width={14} height={14} alt="message"/>
+                // </button>
+                <FormModal table="exam" type="create"/>
                 }  
               </div>
             </div>
