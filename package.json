@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@types/react-big-calendar": "^1.16.0",
     "autoprefixer": "^10.4.20",
     "install": "^0.13.0",
@@ -19,7 +20,9 @@
     "react-big-calendar": "^1.17.0",
     "react-calendar": "^5.1.0",
     "react-dom": "^18.3.1",
-    "recharts": "^2.15.0"
+    "react-hook-form": "^7.54.1",
+    "recharts": "^2.15.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
